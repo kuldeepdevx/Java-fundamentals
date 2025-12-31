@@ -11,4 +11,3 @@ It is intended for learning, revision, and strengthening Java fundamentals.
 - Multithreading and Concurrency
 - Exception Handling
 
-## 🗂 Project Structure
