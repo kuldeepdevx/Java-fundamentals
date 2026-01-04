@@ -1,15 +1,13 @@
 package OOPS.Encapsulation.Challenges.GeometryApplication.utils;
 
-import OOPS.Encapsulation.Challenges.GeometryApplication.geometry.Circle;
-import OOPS.Encapsulation.Challenges.GeometryApplication.geometry.Rectangle;
+public class Calculator{
+    private Calculator(){}
 
-public class Calculator {
-    public static void main(String[] args){
-
-        Circle circle1=new Circle(1);
-        Rectangle rectangle1=new Rectangle(10,10);
-
-        System.out.println(circle1);
-        System.out.println(rectangle1);
+    public static double areaOfRectangle(double length,double breadth){
+        return length*breadth;
     }
+    public static double areaOfCircle(double radius){
+        return Math.PI*Math.pow(radius,2);
+    }
+
 }
