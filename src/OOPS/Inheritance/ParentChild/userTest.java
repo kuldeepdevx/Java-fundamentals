@@ -1,12 +1,16 @@
 package OOPS.Inheritance.ParentChild;
 
-public class userTest extends FourWheeler {
-    void show(){
-        System.out.println("I am userTest");
-    }
-    public static void main(String[] args) {
-        userTest c=new userTest();
+public class userTest{
 
-        c.show();
+    public static void main(String[] args) {
+
+        TwoWheeler bike=new TwoWheeler();
+        bike.show();
+        bike.commute();
+
+        FourWheeler car=new FourWheeler();
+        car.commute();
+        car.show();
+
     }
 }
