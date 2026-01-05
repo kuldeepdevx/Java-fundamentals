@@ -1,8 +1,8 @@
 package OOPS.Encapsulation.Challenges.BANK.BANKACCOUNT;
 
 public class BankAccount{
-    public static int totalApplications;
-    public static int totalAccounts;
+    private static int totalApplications;
+    private static int totalAccounts;
 
     private long accountNumber;
     private String holderName;
@@ -29,6 +29,15 @@ public class BankAccount{
             totalAccounts++;
             System.out.println("\n\nThank you for opening a bank account "+this.holderName+"\n");
     }
+
+    public static int getTotalApplications() {
+        return totalApplications;
+    }
+
+    public static int getTotalAccounts() {
+        return totalAccounts;
+    }
+
 
     public String getHolderName(){
         return holderName;

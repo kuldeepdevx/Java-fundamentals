@@ -1,14 +1,15 @@
 package OOPS.Encapsulation.Challenges.EMPLOYEE;
 
 public class Employee {
-    public static int totalEmployees;
+    private static int totalEmployees;
+
     private String name;
     private double age;
     private double salary;
 
     public Employee(String name,double salary,double age){
-        if( (name == null || name.trim().isEmpty()) ||
-            (age<18 || age>56) || salary<=0){
+        if( !isValidName(name) ||
+            !isValidAge(age) || !isValidSalary(salary)){
             System.out.println("Invalid employee details.");
             return;
         }
@@ -18,44 +19,62 @@ public class Employee {
             totalEmployees++;
     }
 
+    public static int getTotalEmployees() {
+        return totalEmployees;
+    }
+
+
+    public String getName(){
+        return name;
+    }
+
     public void setName(String name){
-       if(name == null || name.trim().isEmpty()){
+       if(!isValidName(name)){
            return;
        }
         this.name=name;
     }
 
+
+    public double getAge(){
+        return age;
+    }
+
     public void setAge(double age) {
-        if(age<18 || age>56){
+        if(!isValidAge(age)){
             System.out.println("Age is not eligible.");
             return;
         }
         this.age = age;
     }
 
+
+    public double getSalary(){
+        return salary;
+    }
+
     public void setSalary(double salary){
-        if(salary<=0){
+        if(!isValidSalary(salary)){
             System.out.println("Invalid salary amount.");
             return;
         }
         this.salary=salary;
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public double getSalary(){
-        return salary;
-    }
-
-    public double getAge(){
-        return age;
-    }
-
     public String seeEmployeeDetails(){
         return "Employee Details["+
                 "Name="+name+",Age="+age+
                 ",Salary="+salary+"]\n";
+    }
+
+    private static boolean isValidName(String name){
+        return name!=null && !name.trim().isEmpty();
+    }
+    private static boolean isValidAge(double age){
+        return age>=18 && age<=56;
+    }
+
+    private static  boolean isValidSalary(double salary){
+        return salary>0;
     }
 }

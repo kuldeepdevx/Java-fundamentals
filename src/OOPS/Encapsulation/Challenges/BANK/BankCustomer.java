@@ -30,8 +30,8 @@ public class BankCustomer{
         BankAccount customer3=new BankAccount(67890,
                 "Samay", 400);
 
-        System.out.println(BankAccount.totalAccounts);
-        System.out.println(BankAccount.totalApplications);
+        System.out.println(BankAccount.getTotalAccounts());
+        System.out.println(BankAccount.getTotalApplications());
     }
 }
 

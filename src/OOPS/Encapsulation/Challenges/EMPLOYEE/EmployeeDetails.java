@@ -17,6 +17,6 @@ public class EmployeeDetails {
 
         Employee employee3=new Employee("Kuldeep",-1000, 10);
 
-        System.out.println(Employee.totalEmployees);
+        System.out.println(Employee.getTotalEmployees());
     }
 }
