@@ -9,8 +9,7 @@ public class userTest{
         bike.commute();
 
         FourWheeler car=new FourWheeler();
-        car.commute();
         car.show();
-
+        car.commute();
     }
 }

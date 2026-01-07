@@ -2,7 +2,7 @@ package OOPS.Inheritance.ParentChild;
 
 public class TwoWheeler extends Vehicle {
 
-    public TwoWheeler(int x){
+    public TwoWheeler(){
         numOfWheels=2;
     }
 
