@@ -1,6 +1,8 @@
 package OOPS.Inheritance.EqualsandHashcode;
 
-class Person{
+import java.util.Objects;
+
+public class Person{
     private String name;
     private int age;
     private String id;
@@ -15,13 +17,18 @@ class Person{
     public boolean equals(Object obj) {
         if(this == obj) return true;
         if(obj == null) return false;
-        if(!(obj instanceof Person)){
+        if(!(obj instanceof Person check)){
             return false;
         }
-        Person check=(Person)obj;
+//        Person check1=(Person)obj;
         return check.name.equals(name)&&
                 check.age==age &&
                 check.id.equals(id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, id);
     }
 
     public int getAge() {
