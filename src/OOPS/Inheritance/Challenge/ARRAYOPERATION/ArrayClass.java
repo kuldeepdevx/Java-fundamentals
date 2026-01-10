@@ -1,40 +1,46 @@
 package OOPS.Inheritance.Challenge.ARRAYOPERATION;
 import java.util.Arrays;
 
-public class ArrayClass {
-    private int[] arr;
+public class ArrayClass{
+    private int[] data;
+    private final Statistics stats = new Statistics();
 
-    public ArrayClass(int size){
-        arr=new int[size];
+    public ArrayClass(int[] data){
+        this.data=data;
     }
 
-    public int[] getArr() {
-        return arr;
+    void printArray(){
+        System.out.println(Arrays.toString(data));
     }
 
-    void setValues(int[] protect){
-        for(int i=0;i<arr.length&& i<protect.length;i++){
-            arr[i]=protect[i];
-        }
+    public double median(){
+        return stats.median();
     }
-    protected class arrayOperation{
-        double mean(int[] arr) {
-            double sum=0;
-            for(int x:arr){
-                sum+=x;
+
+    public double mean(){
+        return stats.mean();
+    }
+
+    private class Statistics{
+
+         private double median(){
+             int[] sorted=data.clone();
+            Arrays.sort(sorted);
+            if(sorted.length%2!=0) {
+                int mid = sorted.length / 2;
+                return sorted[mid];
             }
-            return sum/arr.length;
+            int mid=sorted.length/2;
+            return (sorted[mid]+sorted[mid-1])/2.0;
         }
 
-        double median(int[] arr){
-            Arrays.sort(arr);
-            if(arr.length%2==0) {
-                int x = (arr.length / 2) - 1;
-                int y = x + 1;
-                return ((double) (arr[x] + arr[y]))/2;
-            }
-            int x=arr.length/2;
-            return arr[x];
+        private double mean(){
+
+             double sum=0;
+             for(int x: data){
+                 sum+=x;
+             }
+             return sum/data.length;
         }
     }
 }
