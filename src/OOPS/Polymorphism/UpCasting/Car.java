@@ -1,4 +1,4 @@
-package OOPS.Polymorphism.Casting;
+package OOPS.Polymorphism.UpCasting;
 
 public class Car extends Vehicle {
 

@@ -2,10 +2,6 @@ package OOPS.Polymorphism.Overloading;
 
 public class MethodOverloading {
 
-    MethodOverloading(double a,int b){
-        System.out.println("hi");
-    }
-
     public int add(int a,int b){
         return a+b;
     }
