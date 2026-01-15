@@ -7,5 +7,10 @@ public class UserTest {
 
         vehicle.run();
         vehicle.who();
+
+    }
+
+    private static void test(Vehicle veh){
+
     }
 }
