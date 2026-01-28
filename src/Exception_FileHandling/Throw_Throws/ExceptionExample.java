@@ -1,7 +1,7 @@
-package Exception_FileHandling;
+package Exception_FileHandling.Throw_Throws;
 import java.util.Scanner;
 
-public class Exceptionexample {
+public class ExceptionExample {
     public static void main(String[] args){
         Scanner input=new Scanner(System.in);
 

@@ -8,7 +8,7 @@ public class Square extends Shape{
         this.side=side;
     }
 
-    public double getSide(){
+    public double getDetails(){
         return side;
     }
 
